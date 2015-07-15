@@ -1,7 +1,7 @@
 ### Hooks for the editor to set the default target
-current: target
+current: pngtarget
 
-target pngtarget pdftarget vtarget acrtarget: notarget
+target pngtarget pdftarget vtarget acrtarget: plot.Rout 
 
 ##################################################################
 
@@ -20,10 +20,15 @@ rscripts = summary.R objects.R
 
 Sources += $(scripts) $(rscripts)
 
-$(Sources):
-	/bin/cp /home/dushoff/Dropbox/WorkingWiki-export/.workingwiki/resources/site/$@ .	
-
 ######################################################################
+
+# Examples 
+
+Sources += add.R
+
+add.Rout: add.R
+
+plot.Rout: plot.R
 
 local = default
 md = ../make/

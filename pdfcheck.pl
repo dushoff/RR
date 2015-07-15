@@ -1,4 +1,9 @@
+my $fn = $ARGV[0];
+
 while(<>){
 	last if $page=/\bPage\b/;
 }
-die ("PDF file has no pages\n") unless $page;
+
+unless ($page) {
+	unlink $fn or die "Could not unlink empty pdf file $fn";
+}
