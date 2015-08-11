@@ -9,7 +9,7 @@ target pngtarget pdftarget vtarget acrtarget: plot.Rout
 
 # local.mk should not be a source file; use it to reset the value of the variable local
 
-Sources = Makefile 
+Sources = Makefile inc.mk
 
 ##################################################################
 
